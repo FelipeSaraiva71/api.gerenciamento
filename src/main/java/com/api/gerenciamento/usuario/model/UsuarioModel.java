@@ -23,10 +23,14 @@ public class UsuarioModel {
 
       this.nome = UsuarioUtil.validaNome(nome);
       this.sobrenome = UsuarioUtil.validaNome(sobrenome);
-
-
     }
 
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id){
+        this.id = id;
+    }
     public String getNome(){
         return this.nome;
     }
