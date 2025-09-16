@@ -30,14 +30,14 @@ public class ServicoController {
         return ResponseEntity.ok(servicoService.lerTodos());
     }
 
-    @PutMapping
+    @PutMapping ("{id}")
     public ResponseEntity<?> atualizar(@PathVariable Long id, @RequestBody ServicoModel servicoModel){
         servicoModel.setId(id);
         ServicoModel atualizado = servicoService.salvar(servicoModel);
         return ResponseEntity.ok(atualizado);
     }
 
-    @DeleteMapping
+    @DeleteMapping ("{id}")
     public ResponseEntity<Void> deletar(@PathVariable Long id){
         servicoService.deletarPorId(id);
         return ResponseEntity.noContent().build();
