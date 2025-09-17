@@ -2,7 +2,6 @@ package com.api.gerenciamento.usuario.model;
 
 import com.api.gerenciamento.utils.UsuarioUtil;
 import jakarta.persistence.*;
-import jdk.jshell.execution.Util;
 
 @Entity
 @Table (name = "usuario")
@@ -22,9 +21,9 @@ public class UsuarioModel {
     }
     public UsuarioModel (String nome, String sobrenome, String telefone){
 
-      this.nome = UsuarioUtil.validaNome(nome);
-      this.sobrenome = UsuarioUtil.validaNome(sobrenome);
-      this.telefone = UsuarioUtil.validaFormataTelefone(telefone);
+      this.nome = nome;
+      this.sobrenome = sobrenome;
+      this.telefone = telefone;
     }
 
     public Long getId() {
@@ -37,18 +36,18 @@ public class UsuarioModel {
         return this.nome;
     }
     public void setNome(String nome){
-        this.nome = UsuarioUtil.validaNome(nome);
+        this.nome = nome;
     }
     public String getSobrenome(){
         return this.sobrenome;
     }
     public void setSobrenome(String sobrenome){
-        this.sobrenome = UsuarioUtil.validaNome(sobrenome);
+        this.sobrenome = sobrenome;
     }
     public String getTelefone(){
         return this.telefone;
     }
     public void setTelefone(String telefone){
-        this.telefone = UsuarioUtil.validaFormataTelefone(telefone);
+        this.telefone = telefone;
     }
 }
