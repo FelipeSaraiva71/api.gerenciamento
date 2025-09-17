@@ -15,14 +15,16 @@ public class UsuarioModel {
     private Long id;
     private String nome;
     private String sobrenome;
+    private String telefone;
 
     public UsuarioModel (){
 
     }
-    public UsuarioModel (String nome, String sobrenome){
+    public UsuarioModel (String nome, String sobrenome, String telefone){
 
       this.nome = UsuarioUtil.validaNome(nome);
       this.sobrenome = UsuarioUtil.validaNome(sobrenome);
+      this.telefone = UsuarioUtil.validaFormataTelefone(telefone);
     }
 
     public Long getId() {
@@ -42,5 +44,11 @@ public class UsuarioModel {
     }
     public void setSobrenome(String sobrenome){
         this.sobrenome = UsuarioUtil.validaNome(sobrenome);
+    }
+    public String getTelefone(){
+        return this.telefone;
+    }
+    public void setTelefone(String telefone){
+        this.telefone = UsuarioUtil.validaFormataTelefone(telefone);
     }
 }

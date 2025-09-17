@@ -15,6 +15,7 @@ public class ServicoModel {
     private String nomeServico;
     private String descricao;
 
+
     public ServicoModel(){
 
     }
