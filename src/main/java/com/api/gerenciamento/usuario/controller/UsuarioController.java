@@ -20,9 +20,9 @@ public class UsuarioController {
     UsuarioService usuarioService;
 
     @PostMapping
-    public ResponseEntity<Void> cadastrar(@RequestBody UsuarioCadastroDto dto){
+    public ResponseEntity<UsuarioCadastroDto> cadastrar(@RequestBody UsuarioCadastroDto dto){
        usuarioService.cadastrarUsuario(dto);
-        return  ResponseEntity.status(201).build();
+        return  ResponseEntity.status(201).body(dto);
     }
 
 
@@ -32,9 +32,9 @@ public class UsuarioController {
     }
 
     @PutMapping ("{id}")
-    public ResponseEntity<?> atualizarId(@PathVariable Long id, @RequestBody UsuarioAtualizacaoDto usuarioAtualizacaoDto){
+    public ResponseEntity<UsuarioAtualizacaoDto> atualizarId(@PathVariable Long id, @RequestBody UsuarioAtualizacaoDto usuarioAtualizacaoDto){
         usuarioService.atualizar(id , usuarioAtualizacaoDto);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok().body(usuarioAtualizacaoDto);
     }
 
     @DeleteMapping ("{id}")

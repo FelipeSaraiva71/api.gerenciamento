@@ -7,11 +7,14 @@ public class UsuarioRespostaDto {
     private String nome;
     private String sobrenome;
 
+    public UsuarioRespostaDto(){
+
+    }
 
     public UsuarioRespostaDto(String nome, String sobrenome){
 
         this.nome = UsuarioUtil.validaNome(nome);
-        this.sobrenome = UsuarioUtil.validaNome(nome);
+        this.sobrenome = UsuarioUtil.validaNome(sobrenome);
     }
 
     public String getNome() {
@@ -24,6 +27,6 @@ public class UsuarioRespostaDto {
         return this.sobrenome;
     }
     public void setSobrenome(String sobrenome) {
-        this.sobrenome = UsuarioUtil.validaNome(nome);
+        this.sobrenome = UsuarioUtil.validaNome(sobrenome);
     }
 }

@@ -8,10 +8,14 @@ public class UsuarioCadastroDto {
     private String sobrenome;
     private String telefone;
 
+    public UsuarioCadastroDto(){
+
+    }
+
     public UsuarioCadastroDto(String nome, String sobrenome, String telefone){
 
         this.nome = UsuarioUtil.validaNome(nome);
-        this.sobrenome = UsuarioUtil.validaNome(nome);
+        this.sobrenome = UsuarioUtil.validaNome(sobrenome);
         this.telefone = UsuarioUtil.validaFormataTelefone(telefone);
     }
 
@@ -25,7 +29,7 @@ public class UsuarioCadastroDto {
         return this.sobrenome;
     }
     public void setSobrenome(String sobrenome) {
-        this.sobrenome = UsuarioUtil.validaNome(nome);
+        this.sobrenome = UsuarioUtil.validaNome(sobrenome);
     }
     public String getTelefone() {
         return this.telefone;

@@ -6,6 +6,10 @@ public class UsuarioAtualizacaoDto {
 
         private String telefone;
 
+        public UsuarioAtualizacaoDto(){
+
+        }
+
         public UsuarioAtualizacaoDto(String telefone){
 
             this.telefone = UsuarioUtil.validaFormataTelefone(telefone);
