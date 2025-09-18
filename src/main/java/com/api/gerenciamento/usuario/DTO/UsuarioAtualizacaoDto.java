@@ -2,11 +2,11 @@ package com.api.gerenciamento.usuario.DTO;
 
 import com.api.gerenciamento.utils.UsuarioUtil;
 
-public class UsuarioAtualizacaoDTO{
+public class UsuarioAtualizacaoDto {
 
         private String telefone;
 
-        public UsuarioAtualizacaoDTO(String telefone){
+        public UsuarioAtualizacaoDto(String telefone){
 
             this.telefone = UsuarioUtil.validaFormataTelefone(telefone);
         }

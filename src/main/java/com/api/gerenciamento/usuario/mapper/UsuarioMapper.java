@@ -1,7 +1,7 @@
 package com.api.gerenciamento.usuario.mapper;
-import com.api.gerenciamento.usuario.DTO.UsuarioAtualizacaoDTO;
-import com.api.gerenciamento.usuario.DTO.UsuarioCadastroDTO;
-import com.api.gerenciamento.usuario.DTO.UsuarioRespostaDTO;
+import com.api.gerenciamento.usuario.DTO.UsuarioAtualizacaoDto;
+import com.api.gerenciamento.usuario.DTO.UsuarioCadastroDto;
+import com.api.gerenciamento.usuario.DTO.UsuarioRespostaDto;
 import com.api.gerenciamento.usuario.model.UsuarioModel;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
@@ -10,9 +10,11 @@ import org.mapstruct.MappingTarget;
 public interface UsuarioMapper {
 
 
-    UsuarioModel toEntity(UsuarioCadastroDTO dto);
+    UsuarioModel toEntity(UsuarioCadastroDto dto);
 
-    UsuarioRespostaDTO toRespostaDTO(UsuarioModel model);
+    UsuarioRespostaDto toRespostaDto(UsuarioModel model);
 
-    void updateEntityFromDTO(UsuarioAtualizacaoDTO dto,@MappingTarget UsuarioModel entity);
+    void updateEntityFromDto(UsuarioAtualizacaoDto dto, @MappingTarget UsuarioModel entity);
+
+
 }

@@ -2,17 +2,16 @@ package com.api.gerenciamento.usuario.DTO;
 
 import com.api.gerenciamento.utils.UsuarioUtil;
 
-public class UsuarioCadastroDTO {
+public class UsuarioRespostaDto {
 
     private String nome;
     private String sobrenome;
-    private String telefone;
 
-    public UsuarioCadastroDTO(String nome, String sobrenome, String telefone){
+
+    public UsuarioRespostaDto(String nome, String sobrenome){
 
         this.nome = UsuarioUtil.validaNome(nome);
         this.sobrenome = UsuarioUtil.validaNome(nome);
-        this.telefone = UsuarioUtil.validaFormataTelefone(telefone);
     }
 
     public String getNome() {
@@ -26,11 +25,5 @@ public class UsuarioCadastroDTO {
     }
     public void setSobrenome(String sobrenome) {
         this.sobrenome = UsuarioUtil.validaNome(nome);
-    }
-    public String getTelefone() {
-        return this.telefone;
-    }
-    public void setTelefone(String telefone) {
-        this.telefone = UsuarioUtil.validaFormataTelefone(telefone);
     }
 }
