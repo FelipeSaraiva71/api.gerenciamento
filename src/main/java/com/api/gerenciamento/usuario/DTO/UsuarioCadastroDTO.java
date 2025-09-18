@@ -24,15 +24,12 @@ public class UsuarioCadastroDTO {
     public String getSobrenome(){
         return this.sobrenome;
     }
-
     public void setSobrenome(String sobrenome) {
         this.sobrenome = UsuarioUtil.validaNome(nome);
     }
-
     public String getTelefone() {
         return this.telefone;
     }
-
     public void setTelefone(String telefone) {
         this.telefone = UsuarioUtil.validaFormataTelefone(telefone);
     }

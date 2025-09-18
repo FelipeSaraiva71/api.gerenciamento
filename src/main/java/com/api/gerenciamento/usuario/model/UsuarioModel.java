@@ -9,7 +9,7 @@ public class UsuarioModel {
 
     @Id
     @GeneratedValue
-            (strategy = GenerationType.IDENTITY)
+            (strategy=GenerationType.IDENTITY)
 
     private Long id;
     private String nome;
@@ -17,8 +17,8 @@ public class UsuarioModel {
     private String telefone;
 
     public UsuarioModel (){
-
     }
+
     public UsuarioModel (String nome, String sobrenome, String telefone){
 
       this.nome = nome;
